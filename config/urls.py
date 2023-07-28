@@ -14,8 +14,6 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-Javohir, [28 Jul 2023 at 11:18:54]:
-permission_classes = (IsOwnerPermissions,)
 
 from django.contrib import admin
 from django.urls import path, include
@@ -35,7 +33,7 @@ schema_view = get_schema_view(
       license=openapi.License(name="BSD License"),
    ),
    public=True,
-   permission_classes=(permissions.AllowAny,),
+   permission_classes=(permissions.AllowAny,)
 )
 
 urlpatterns = [
@@ -43,7 +41,7 @@ urlpatterns = [
     path('api/user/', include('user.urls')),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('v1/api/Admin/',include('Admin.urls')),
+    # path('v1/api/Admin/',include('Admin.urls')),
     path('swagger<format>/', schema_view.without_ui(cache_timeout=0), name='schema-json'),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),

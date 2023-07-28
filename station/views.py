@@ -3,7 +3,7 @@ from .models import StationModel
 from .serializers import StationSerializer
 from rest_framework import generics
 
-class StationnView(generics.ListCreateAPIView):
+class StationView(generics.ListCreateAPIView):
     queryset = StationModel.objects.all()
     serializer_class = StationSerializer
 class StationRudView(generics.RetrieveUpdateDestroyAPIView):

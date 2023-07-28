@@ -1,10 +1,8 @@
 from django.db import models
 from datetime import datetime
-from Admin.models import AdminModel
 from user.models import UserModel
 # Create your models here.
 class StationModel(models.Model):
-    admin = models.ForeignKey(AdminModel, on_delete=models.CASCADE, null=True, default=None)
     name = models.CharField(max_length=100, default='')
     image =models.ImageField(max_length=200 ,upload_to='images/')
     hourprice = models.PositiveSmallIntegerField(default='')
@@ -18,3 +16,13 @@ class StationModel(models.Model):
     
     class Meta:
         db_table = 'station'
+
+class BronedModel(models.Model):
+    from user.models import BronModel
+    name = models.ForeignKey(BronModel, on_delete=models.SET_NULL, null=True)
+
+    def __str__(self) -> str:
+        return self.name
+    
+    class Meta:
+        db_table = 'broned'

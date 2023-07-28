@@ -31,13 +31,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+AUTH_USER_MODEL = 'user.CustomUser'
 # Application definition
 
 INSTALLED_APPS = [
     #local
     'user',
-    'Admin',
+    'station',
     #third
     'django.contrib.staticfiles',  # required for serving swagger ui's css/js files
     'drf_yasg',
