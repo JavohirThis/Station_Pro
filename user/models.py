@@ -1,5 +1,4 @@
 from django.db import models
-from phonenumber_field.modelfields import PhoneNumberField
 
 from datetime import datetime
 # Create your models here.
@@ -10,7 +9,7 @@ from datetime import datetime
 class UserModel(models.Model):
     frist_name = models.CharField(max_length=65)
     last_name = models.CharField(max_length=65)
-    phone = PhoneNumberField()
+    phone = models.CharField(max_length=122)
 
 
 class BronModel(models.Model):

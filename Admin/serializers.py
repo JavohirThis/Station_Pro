@@ -5,8 +5,3 @@ class AdminSerializer(serializers.ModelSerializer):
     class Meta:
         model = AdminModel
         fields = '__all__'
-
-
-
-
-    
