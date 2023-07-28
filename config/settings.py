@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'user',
     'Admin',
     #third
-    'phonenumber_field',
     'django.contrib.staticfiles',  # required for serving swagger ui's css/js files
     'drf_yasg',
     'rest_framework',
