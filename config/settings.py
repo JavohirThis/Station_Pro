@@ -36,7 +36,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     #local
-    'hospital',
+    'Admin',
     #third
     'phonenumber_field',
     'django.contrib.staticfiles',  # required for serving swagger ui's css/js files
@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
 ]
-AUTH_USER_MODEL = 'hospital.CustomUser'
+# AUTH_USER_MODEL = 'hospital.CustomUser'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
